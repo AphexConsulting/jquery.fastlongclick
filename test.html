@@ -1,0 +1,21 @@
+<html>
+<body>
+  <input type="button" id="button1" value="Click me!">
+  
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.fastlongclick.js"></script>
+  <script>
+    $(function() {
+      $('#button1').removefastlongclicks();
+      $('#button1').fastclick(function() {
+        // handler for element with id #id for normal clicks
+        alert('Fast click event handler');
+      });
+      $('#button1').longclick(function() {
+        // handler for element with id #id for long clicks
+        alert('Long click event handler');
+      });
+    });
+  </script>
+</body>
+</html>
