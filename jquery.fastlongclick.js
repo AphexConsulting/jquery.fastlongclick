@@ -57,7 +57,6 @@ $(function () {
       },
       'mouseup.fastlongclick touchend.fastlongclick click.fastlongclick': function(event) {
         if (isTouch && event.type == 'mouseup') return;
-        if (event.type === 'mouseup' && navigator.userAgent.match(/IEMobile/i)) return;
         
         if (info.down) {
           var duration = new Date().getTime() - info.down.time;
